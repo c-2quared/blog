@@ -1,6 +1,6 @@
 {
   "origins": [
-    "https://csquared-blog.com"
+    "https://www.csquared-blog.com"
   ],
   "originsRegex": [
     "http://localhost:[0-9]+"
