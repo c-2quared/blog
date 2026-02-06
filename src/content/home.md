@@ -1,8 +1,10 @@
 ---
 avatarImage:
-  src: './avatar.jpg'
-  alt: 'My avatar'
-githubCalendar: 'stelcodes'
+  src: './spiral.jpg'
+  alt: 'Spiral of Tori'
+githubCalendar: 'c-2quared'
 ---
 
-Welcome to the example site. This site is meant to show off my custom Astro theme/template **MultiTerm** which creates a coder-ready blog complete with an interactive theme changer, RSS, sitemap, tagging, and markdown extensions.
+Hey, welcome to my blog 👋🏽
+
+I plan to discuss some of my projects and thoughts about math

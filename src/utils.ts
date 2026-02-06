@@ -16,6 +16,15 @@ import { getCollection, type CollectionEntry } from 'astro:content'
 import Color from 'color'
 import { slug } from 'github-slugger'
 
+// From astro-erudite
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
+// From astro-erudite
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
 export function dateString(date: Date) {
   return date.toISOString().split('T')[0]
 }

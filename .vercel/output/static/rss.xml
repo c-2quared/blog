@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>c squared</title><description/><link>https://csquared-blog.com</link><item><title>Showing Off Blog Features</title><link>https://csquared-blog.com/posts/showing-off-blog-features</link><guid isPermaLink="true">https://csquared-blog.com/posts/showing-off-blog-features</guid><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note
+I am leaving this blog post up to show off the features of the Multiterm Astro theme by &lt;code&gt;stelcodes&lt;/code&gt; (&lt;a href=&quot;https://github.com/stelcodes/multiterm-astro&quot;&gt;stelcodes/multiterm-astro&lt;/a&gt;), who is the author of this blog post. This blog post, as well as several more amazing posts, can be found at the &lt;a href=&quot;https://multiterm.stelclementine.com/&quot;&gt;example website&lt;/a&gt;.
+:::&lt;/p&gt;
+&lt;p&gt;Since the post does not have a description in the frontmatter, the first paragraph is used.&lt;/p&gt;
+&lt;h2&gt;Theming&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Use your favorite editor theme for your blog!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Theming for the website comes from builtin Shiki themes found in Expressive Code. You can view them &lt;a href=&quot;https://expressive-code.com/guides/themes/#available-themes&quot;&gt;here&lt;/a&gt;. A website can have one or more themes, defined in &lt;code&gt;src/site.config.ts&lt;/code&gt;. There are three theming modes to choose from:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;single&lt;/code&gt;: Choose a single theme for the website. Simple.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;light-dark-auto&lt;/code&gt;: Choose two themes for the website to use for light and dark mode. The header will include a button for toggling between light/dark/auto. For example, you could choose &lt;code&gt;github-dark&lt;/code&gt; and &lt;code&gt;github-light&lt;/code&gt; with a default of &lt;code&gt;&quot;auto&quot;&lt;/code&gt; and the user&apos;s experience will match their operating system theme straight away.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select&lt;/code&gt;: Choose two or more themes for the website and include a button in the header to change between any of these themes. You could include as many Shiki themes from Expressive Code as you like. Allow users to find their favorite theme!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When the user changes the theme, their preference is stored in &lt;code&gt;localStorage&lt;/code&gt; to persist across page navigation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Code Blocks&lt;/h2&gt;
+&lt;p&gt;Let&apos;s look at some code block styles:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def hello_world():
+    print(&quot;Hello, world!&quot;)
+
+hello_world()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;def hello_world():
+    print(&quot;Hello, world!&quot;)
+
+hello_world()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;python hello.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Also some inline code: &lt;code&gt;1 + 2 = 3&lt;/code&gt;. Or maybe even &lt;code&gt;(= (+ 1 2) 3)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;https://expressive-code.com/key-features/syntax-highlighting/&quot;&gt;Expressive Code Docs&lt;/a&gt; for more information on available features like wrapping text, line highlighting, diffs, etc.&lt;/p&gt;
+&lt;h2&gt;Basic Markdown Elements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;List item 1&lt;/li&gt;
+&lt;li&gt;List item 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Bold text&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Italic text&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;Strikethrough text&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.example.com&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In life, as in art, some endings are bittersweet. Especially when it comes to love. Sometimes fate throws two lovers together only to rip them apart. Sometimes the hero finally makes the right choice but the timing is all wrong. And, as they say, timing is everything.&lt;/p&gt;
+&lt;p&gt;- Gossip Girl&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;th&gt;City&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Alice&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;New York&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;Los Angeles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Charlie&lt;/td&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;Chicago&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Images&lt;/h2&gt;
+&lt;p&gt;Images can include a title string after the URL to render as a &lt;code&gt;&amp;lt;figure&amp;gt;&lt;/code&gt; with a &lt;code&gt;&amp;lt;figcaption&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./PixelatedGreenTreeSide.png&quot; alt=&quot;Pixel art of a tree&quot; title=&quot;Pixel art renders poorly without proper CSS&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![Pixel art of a tree](./PixelatedGreenTreeSide.png &apos;Pixel art renders poorly without proper CSS&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I&apos;ve also added a special tag for pixel art that adds the correct CSS to render properly. Just add &lt;code&gt;#pixelated&lt;/code&gt; to the very end of the alt string.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./PixelatedGreenTreeSide.png&quot; alt=&quot;Pixel art of a tree #pixelated&quot; title=&quot;But adding #pixelated to the end of the alt string fixes this&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![Pixel art of a tree #pixelated](./PixelatedGreenTreeSide.png &apos;But adding #pixelated to the end of the alt string fixes this&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Admonitions&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;:::note
+testing123
+:::
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::note
+testing123
+:::&lt;/p&gt;
+&lt;p&gt;:::tip
+testing123
+:::&lt;/p&gt;
+&lt;p&gt;:::important
+testing123
+:::&lt;/p&gt;
+&lt;p&gt;:::caution
+testing123
+:::&lt;/p&gt;
+&lt;p&gt;:::warning
+testing123
+:::&lt;/p&gt;
+&lt;h2&gt;Character Chats&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;:::duck
+**Did you know?** You can easily create custom character chats for your blog with MultiTerm!
+:::
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::duck
+&lt;strong&gt;Did you know?&lt;/strong&gt; You can easily create custom character chats for your blog with MultiTerm!
+:::&lt;/p&gt;
+&lt;h3&gt;Adding Your Own&lt;/h3&gt;
+&lt;p&gt;To add your own character, first add an image file to the top-level &lt;code&gt;/public&lt;/code&gt; directory in your cloned MultiTerm repo. Astro cannot automatically optimize image assets from markdown plugins, so make sure to compress the image to a web-friendly size (&amp;lt;100kb).&lt;/p&gt;
+&lt;p&gt;I recommend Google&apos;s free &lt;a href=&quot;https://squoosh.app&quot;&gt;Squoosh&lt;/a&gt; web app for creating super small webp files. The characters here have been resized to 300 pixels wide and exported to webp with 75% quality using Squoosh.&lt;/p&gt;
+&lt;p&gt;After you&apos;ve added your image, update the &lt;code&gt;characters&lt;/code&gt; option in &lt;code&gt;site.config.ts&lt;/code&gt; with your newly added image file and restart the development server.&lt;/p&gt;
+&lt;h3&gt;Character Conversations&lt;/h3&gt;
+&lt;p&gt;When there are multiple character chats in a row, the order of the chat image and chat bubble reverses to give the chat more of a back-and-forth appearance.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::owl
+This is a cool feature!
+:::
+
+:::unicorn
+I agree!
+:::
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::owl
+This is a cool feature!
+:::&lt;/p&gt;
+&lt;p&gt;:::unicorn
+I agree!
+:::&lt;/p&gt;
+&lt;p&gt;You can specify the alignment (&lt;code&gt;left&lt;/code&gt; or &lt;code&gt;right&lt;/code&gt;) to override the default &lt;code&gt;left, right, left, ...&lt;/code&gt; ordering.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:::unicorn{align=&quot;right&quot;}
+Over here, to the right!
+:::
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::unicorn{align=&quot;right&quot;}
+Over here, to the right!
+:::&lt;/p&gt;
+&lt;h2&gt;GitHub Cards&lt;/h2&gt;
+&lt;p&gt;GitHub overview cards heavily inspired by &lt;a href=&quot;https://github.com/chrismwilliams/astro-theme-cactus&quot;&gt;Astro Cactus&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;::github{repo=&quot;stelcodes/multiterm-astro&quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;::github{repo=&quot;stelcodes/multiterm-astro&quot;}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;::github{user=&quot;withastro&quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;::github{user=&quot;withastro&quot;}&lt;/p&gt;
+&lt;h2&gt;Emoji :star_struck:&lt;/h2&gt;
+&lt;p&gt;Emojis can be added in markdown by including a literal emoji character or a GitHub shortcode. You can browse an unofficial database &lt;a href=&quot;https://emojibase.dev/emojis?shortcodePresets=github&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Good morning! :sleeping: :coffee: :pancakes:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Good morning! :sleeping: :coffee: :pancakes:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All emojis (both literal and shortcoded) are made more accessible by wrapping them in a &lt;code&gt;span&lt;/code&gt; tag like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;span role=&quot;img&quot; aria-label=&quot;coffee&quot;&amp;gt;☕️&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At the time of writing, &lt;a href=&quot;https://emojipedia.org/emoji-16.0&quot;&gt;emoji v16&lt;/a&gt; is not supported yet. These emojis can be included literally but they do not have shortcodes and will not be wrapped.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;LaTeX/KaTeX Math Support&lt;/h2&gt;
+&lt;p&gt;You can also display inline math via &lt;a href=&quot;https://github.com/remarkjs/remark-math&quot;&gt;remark-math and rehype-katex&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Make those equations pretty! $ \frac{a}{b} \cdot b = a $
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Make those equations pretty! $ \frac{a}{b} \cdot b = a $&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https://katex.org/docs/supported&quot;&gt;KaTeX docs&lt;/a&gt; to learn about the syntax.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$$
+a + ar + ar^2 + ar^3 + \dots + ar^{n-1} = \displaystyle\sum_{k=0}^{n - 1}ar^k = a \bigg(\dfrac{1 - r^n}{1 -r}\bigg)
+$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$$
+a + ar + ar^2 + ar^3 + \dots + ar^{n-1} = \displaystyle\sum_{k=0}^{n - 1}ar^k = a \bigg(\dfrac{1 - r^n}{1 -r}\bigg)
+$$&lt;/p&gt;
+&lt;h2&gt;HTML Elements&lt;/h2&gt;
+&lt;p&gt;&amp;lt;button&amp;gt;A Button&amp;lt;/button&amp;gt;&lt;/p&gt;
+&lt;h3&gt;Fieldset with Inputs&lt;/h3&gt;
+&lt;p&gt;&amp;lt;fieldset&amp;gt;
+&amp;lt;input type=&quot;text&quot; placeholder=&quot;Type something&quot;&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;input type=&quot;number&quot; placeholder=&quot;Insert number&quot;&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;input type=&quot;text&quot; value=&quot;Input value&quot;&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;select&amp;gt;
+&amp;lt;option value=&quot;1&quot;&amp;gt;Option 1&amp;lt;/option&amp;gt;
+&amp;lt;option value=&quot;2&quot;&amp;gt;Option 2&amp;lt;/option&amp;gt;
+&amp;lt;option value=&quot;3&quot;&amp;gt;Option 3&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;textarea placeholder=&quot;Insert a comment...&quot;&amp;gt;&amp;lt;/textarea&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;label&amp;gt;&amp;lt;input type=&quot;checkbox&quot;&amp;gt; I understand&amp;lt;br&amp;gt;&amp;lt;/label&amp;gt;
+&amp;lt;button type=&quot;submi&quot;&amp;gt;Submit&amp;lt;/button&amp;gt;
+&amp;lt;/fieldset&amp;gt;&lt;/p&gt;
+&lt;h3&gt;Form with Labels&lt;/h3&gt;
+&lt;p&gt;&amp;lt;form&amp;gt;
+&amp;lt;label&amp;gt;
+&amp;lt;input type=&quot;radio&quot; name=&quot;fruit&quot; value=&quot;apple&quot;&amp;gt;
+Apple
+&amp;lt;/label&amp;gt;&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;label&amp;gt;
+&amp;lt;input type=&quot;radio&quot; name=&quot;fruit&quot; value=&quot;banana&quot;&amp;gt;
+Banana
+&amp;lt;/label&amp;gt;&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;label&amp;gt;
+&amp;lt;input type=&quot;radio&quot; name=&quot;fruit&quot; value=&quot;orange&quot;&amp;gt;
+Orange
+&amp;lt;/label&amp;gt;&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;label&amp;gt;
+&amp;lt;input type=&quot;radio&quot; name=&quot;fruit&quot; value=&quot;grape&quot;&amp;gt;
+Grape
+&amp;lt;/label&amp;gt;&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;label&amp;gt;
+&amp;lt;input type=&quot;checkbox&quot; name=&quot;terms&quot; value=&quot;agree&quot;&amp;gt;
+I agree to the terms and conditions
+&amp;lt;/label&amp;gt;&amp;lt;br&amp;gt;&lt;/p&gt;
+</content:encoded><author>c squared</author></item><item><title>How I Customized Multiterm</title><link>https://csquared-blog.com/posts/customized-multiterm</link><guid isPermaLink="true">https://csquared-blog.com/posts/customized-multiterm</guid><description>How I customized and configured the Multiterm blog template</description><pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;import Callout from &apos;~/components/Callout.astro&apos;
+import TestDiagram from &quot;./comm-diagram-test.svg&quot;
+import TestDiagram2 from &quot;./comm-diagram-test-2.svg&quot;&lt;/p&gt;
+&lt;p&gt;The main features that I wanted for this blog was to have a way to embed commutative diagrams and have custom callouts (theorems, lemmas, proofs, etc.), both matching the theme selected theme of the site. This post will discuss my current process for achieving this, along with some other miscellaneous modifications.&lt;/p&gt;
+&lt;h2&gt;LaTeX Diagrams&lt;/h2&gt;
+&lt;p&gt;This solution requires you to change the file extensions for posts from &lt;code&gt;.md&lt;/code&gt; to &lt;code&gt;.mdx&lt;/code&gt; and import all of your diagrams at the top of the file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &apos;Blog Post Title&apos;
+.
+.
+.
+---
+import TestDiagram from &quot;./comm-diagram-test.svg&quot;
+import TestDiagram2 from &quot;./comm-diagram-test-2.svg&quot;
+.
+.
+.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Render them in $\LaTeX$ using &lt;a href=&quot;https://q.uiver.app/&quot;&gt;quiver&lt;/a&gt; or some other tool. Use &lt;a href=&quot;https://upmath.me/&quot;&gt;upmath&lt;/a&gt; by rendering as html, viewing the source by following the link, and saving the page with &lt;code&gt;ctrl + s&lt;/code&gt; as an &lt;code&gt;svg&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In the &lt;code&gt;global.css&lt;/code&gt; file, add the following at the bottom of the file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.diagram {
+  width: 100%;
+  width: 100%;
+  /* [top bottom] [left right] */
+  margin: 3rem auto;
+  fill: currentColor;
+}
+
+.diagram path,
+.diagram line,
+.diagram polyline,
+.diagram polygon {
+  /* to avoid having bloated glyphs on mobile */
+  vector-effect: non-scaling-stroke;
+  stroke: currentColor;
+  stroke-width: 0.075rem;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, inline the diagrams&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;TestDiagram class=&quot;diagram&quot; /&amp;gt;
+&amp;lt;TestDiagram2 class=&quot;diagram&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;TestDiagram class=&quot;diagram&quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;(some text between them)&lt;/p&gt;
+&lt;p&gt;&amp;lt;TestDiagram2 class=&quot;diagram&quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;To place two diagrams next to each other, add the following styling to the end of  &lt;code&gt;global.css&lt;/code&gt; file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.diagram-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Place your diagrams next to each other like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;diagram-row&quot;&amp;gt;
+  &amp;lt;TestDiagram class=&quot;diagram&quot; /&amp;gt;
+  &amp;lt;TestDiagram2 class=&quot;diagram&quot; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;div class=&quot;diagram-row&quot;&amp;gt;
+&amp;lt;TestDiagram class=&quot;diagram&quot; /&amp;gt;
+&amp;lt;TestDiagram2 class=&quot;diagram&quot; /&amp;gt;
+&amp;lt;/div&amp;gt;&lt;/p&gt;
+&lt;p&gt;The diagrams will now change their color with the selected theme :slightly_smiling_face:&lt;/p&gt;
+&lt;p&gt;:::note
+I believe the maintainers of &lt;a href=&quot;https://q.uiver.app/&quot;&gt;quiver&lt;/a&gt; are working on exporting diagrams to &lt;code&gt;svg&lt;/code&gt;; until then, this will be my current work-around.
+:::&lt;/p&gt;
+&lt;h2&gt;Custom Callouts&lt;/h2&gt;
+&lt;p&gt;While the Multiterm theme comes packaged with callouts, they don&apos;t support my goals for blogging about math and computer science. During my search for a blog template, I was debating on using the &lt;a href=&quot;https://astro-erudite.vercel.app/&quot;&gt;Erudite theme&lt;/a&gt;. I ultimately chose the Multiterm template - one of the main reasons being the wide variety of themes to choose from - but the Erudite theme had the callout feature that I wanted: &lt;a href=&quot;https://astro-erudite.vercel.app/blog/callouts-component&quot;&gt;A Callout Component for Nerds&lt;/a&gt;. So, I integrated the callout component into Multiterm; I absolutely love the way they look!&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;Functor&quot; variant=&quot;definition&quot;&amp;gt;
+A functor is an arrow $F : \mathsf{C} \to \mathsf{D}$ between categories - $F$ takes objects to objects and morphisms to morphisms in such a way that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\mathsf{dom} , Ff = F , \mathsf{dom} , f$ for each $\mathsf{C}$-morphism $f$,&lt;/li&gt;
+&lt;li&gt;$\mathsf{cod} , Ff = F , \mathsf{cod} , f$ for each $\mathsf{C}$-morphism $f$,&lt;/li&gt;
+&lt;li&gt;$F , \mathsf{id}&lt;em&gt;c = \mathsf{id}&lt;/em&gt;{Fc}$ for each $c \in \mathsf{C}$,&lt;/li&gt;
+&lt;li&gt;$F(g \circ f) = F f \circ F g$ for each pair of composable $\mathsf{C}$-morphisms $f$ and $g$.
+&amp;lt;/Callout&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;Identity Functor&quot; variant=&quot;example&quot;&amp;gt;
+For every category $\mathsf{C}$, there is a functor $\mathsf{Id} : \mathsf{C} \to \mathsf{C}$ which preserves all objects and morphisms of $\mathsf{C}$.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;The Yoneda Lemma&quot; variant=&quot;lemma&quot;&amp;gt;
+Let $\mathsf{C}$ be a locally small category and $F : \mathsf{C} \to \mathsf{Set}$ be a functor.
+$$
+\mathsf{Nat}(\mathsf{C}(c,-),F) \cong Fc
+$$
+naturally in $F$ and $c$ when viewed as functors $\mathsf{C} \times [\mathsf{C},\mathsf{Set}] \to \mathsf{Set}$.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;Of Yoneda&quot; variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+&amp;lt;Insert Proof of the Yoneda Lemma&amp;gt;
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;The Comprehensive Factorization Theorem&quot; variant=&quot;theorem&quot;&amp;gt;
+The class of final functors and discrete fibrations forms an orthogonal factorization system of $\mathsf{Cat}$. Dually, the class of inital functors and discrete opfibrations forms an orthogonal factorization system of $\mathsf{Cat}$.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;h2&gt;Miscellaneous Modifications&lt;/h2&gt;
+&lt;p&gt;In addition to the above modifications for having responsive $\LaTeX$ diagrams, I will keep a record of the other small customizations that I have made to Multiterm.&lt;/p&gt;
+&lt;h3&gt;Increasing the Article Width&lt;/h3&gt;
+&lt;p&gt;In the &lt;code&gt;Layouts.astro&lt;/code&gt; file, there is a section specifying the layout of the page, along with some &lt;code&gt;tailwindcss&lt;/code&gt; styling:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;body class=&quot;w-full h-full m-0 bg-background text-foreground&quot;&amp;gt;
+    &amp;lt;div
+      class=&quot;flex flex-col max-w-3xl min-h-screen border-accent/10 m-auto p-3 sm:py-5 sm:px-6 md:py-10&quot;
+    &amp;gt;
+      &amp;lt;Header /&amp;gt;
+      &amp;lt;main class=&quot;flex flex-col py-1&quot;&amp;gt;
+        &amp;lt;slot /&amp;gt;
+      &amp;lt;/main&amp;gt;
+      &amp;lt;Footer /&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To increase the article width, we can change maximum width parameter (I changed it to something between &lt;code&gt;3xl&lt;/code&gt; and &lt;code&gt;4xl&lt;/code&gt;)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;div
+      class=&quot;flex flex-col max-w-[52rem] min-h-screen border-accent/10 m-auto p-3 sm:py-5 sm:px-6 md:py-10&quot;
+    &amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Setting Up Giscus&lt;/h3&gt;
+&lt;p&gt;Setting up Giscus was relatively straightforward by following the directions found on the &lt;a href=&quot;http://giscus.app&quot;&gt;giscus.app&lt;/a&gt;. The one thing that was confusing for me was setting up the &lt;code&gt;giscus.json&lt;/code&gt; and using the &lt;code&gt;origins&lt;/code&gt; key correctly. The below can be found at &lt;a href=&quot;https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md&quot;&gt;Advanced Usage Giscus Documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;origins&lt;/code&gt; field is used to control the domains can read from and write to the GitHub discussions on your blog&apos;s repository. The &lt;code&gt;origins&lt;/code&gt; key accepts a list of strings that are checked against the &lt;code&gt;window.origin&lt;/code&gt; of the page that loads Giscus. Another key that the &lt;code&gt;giscus.json&lt;/code&gt; accepts is the &lt;code&gt;originsRegex&lt;/code&gt; key, which accepts a regular expression representing a set of domain names to be tested against the &lt;code&gt;window.origin&lt;/code&gt; of the page that loads Giscus.&lt;/p&gt;
+&lt;p&gt;An example &lt;code&gt;giscus.json&lt;/code&gt; looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;origins&quot;: [
+    &quot;https://your-blogs-domain-name&quot;
+  ],
+  &quot;originsRegex&quot;: [
+    &quot;http://localhost:[0-9]+&quot;
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After pushing to your remote repository with this &lt;code&gt;giscus.json&lt;/code&gt;, your blog&apos;s domain and any ports exposed by your machine&apos;s local host have read and write permissions to the GitHub discussions on your blog&apos;s repository.&lt;/p&gt;
+&lt;p&gt;In my case, when I set up my &lt;code&gt;giscus.json&lt;/code&gt;, I had set my &lt;code&gt;origins&lt;/code&gt; key incorrectly. Giscus wasn&apos;t loading comments and was being redirected to &lt;a href=&quot;https://github.com/orgs/giscus/discussions/1298&quot;&gt;https://github.com/orgs/giscus/discussions/1298&lt;/a&gt; (you can find this redirect in the Network Monitor section of your browser&apos;s developer tools), but figuring out that my &lt;code&gt;origins&lt;/code&gt; key was incorrect was tricky. If you end up being redirected here when setting up Giscus, make sure that your domain names are correct in your &lt;code&gt;giscus.json&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Staying Synced with stelcodes&lt;/h3&gt;
+&lt;p&gt;Since I forked this template from &lt;a href=&quot;https://github.com/stelcodes/multiterm-astro&quot;&gt;stelcodes/multiterm-astro&lt;/a&gt;, I wanted my fork to stay up to date with the original repository. To do so, I followed &lt;a href=&quot;https://github.com/orgs/community/discussions/153608&quot;&gt;this guide&lt;/a&gt;.&lt;/p&gt;
+</content:encoded><author>c squared</author></item><item><title>Three Connected Perspectives</title><link>https://csquared-blog.com/posts/three-connected-perspectives</link><guid isPermaLink="true">https://csquared-blog.com/posts/three-connected-perspectives</guid><description>A discussion about three perspectives on the notion of connectedness in topology and how they are related.</description><pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate><content:encoded>&lt;p&gt;import Callout from &apos;~/components/Callout.astro&apos;&lt;/p&gt;
+&lt;p&gt;This blog post was originally supposed to be about my one of my favorite characterizations of connectedness called &lt;em&gt;chain-connectedness&lt;/em&gt;. After a few drafts, I realized that chain-connectedness isn&apos;t rich enough for an entire post. I also realized that, while visually appealing, chain-connectedness isn&apos;t the most suitable notion of connectedness for some applications. My perspective on connectedness has recently grown, and I now have a trifecta of favorite characterizations of connectedness.&lt;/p&gt;
+&lt;p&gt;{/* TODOL Fix this intro. merge with current one&lt;/p&gt;
+&lt;p&gt;Connectedness admits many equivalent characterizations, each emphasizing a different aspect of how local data constrains global structure. Some are algebraic, some geometric, and some combinatorial.&lt;/p&gt;
+&lt;p&gt;This post grew out of an attempt to write about one such characterization — chain-connectedness — which I originally found especially intuitive and visually appealing. In the process, I realized that chain-connectedness is best understood not in isolation, but as part of a small constellation of ideas that all express the same underlying principle: in a connected space, distinctions that disappear locally cannot persist globally.&lt;/p&gt;
+&lt;p&gt;In what follows, I’ll describe three equivalent perspectives on connectedness — via clopen subsets, chains of open sets, and locally trivial equivalence relations — and explain how each highlights a different way that local information propagates across a space. */}&lt;/p&gt;
+&lt;p&gt;{/* I originally planned to write about chain-connectedness, a characterization of connectedness I find particularly intuitive. While developing the idea, I realized that chain-connectedness is best understood as part of a broader picture involving two other, complementary perspectives. This post presents all three. */}&lt;/p&gt;
+&lt;p&gt;:::note
+The empty set vacuously satisfies all of the equivalent characterizations of connectedness that follow. Regardless of your personal convention -- whether or not the empty set is connected -- we can assume, without loss of generality, that all spaces $X$ are non-empty from this point on.
+:::&lt;/p&gt;
+&lt;p&gt;Before discussing chain-connectedness, I want to first introduce the idea of connectedness as an induction principle.&lt;/p&gt;
+&lt;h2&gt;Connectedness as an Induction Principle&lt;/h2&gt;
+&lt;p&gt;Our initial characterization of connectedness will be as follows:&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;Connected&quot; variant=&quot;definition&quot;&amp;gt;
+A topological space $X$ is said to be &lt;em&gt;&lt;strong&gt;disconnected&lt;/strong&gt;&lt;/em&gt; provided that there exists two non-empty, disjoint, open subsets of $X$ which union to $X$. The space $X$ is said to be &lt;em&gt;&lt;strong&gt;connected&lt;/strong&gt;&lt;/em&gt; provided that it is not disconnected.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;Intuitively, this notion of connectedness says that the non-empty open subsets of $X$ cannot separate $X$.&lt;/p&gt;
+&lt;p&gt;Over at &lt;a href=&quot;https://pseudonium.github.io/&quot;&gt;Pseudonium&apos;s Blog&lt;/a&gt;, &lt;a href=&quot;https://pseudonium.github.io/2025/09/17/Connectedness_As_Induction.html&quot;&gt;connectedness as an induction Principle&lt;/a&gt; is motivated by and generalizes &lt;a href=&quot;https://arxiv.org/abs/1208.0973&quot;&gt;real induction&lt;/a&gt;. Roughly, the induction principle characterizes a connected space by its clopen subsets, of which there can only be two -- the whole space and the empty space.&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;Induction Principle for Connectedness&quot; variant=&quot;theorem&quot;&amp;gt;
+A topological space $X$ is connected if and only if for every subset $S$ of $X$ such that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S$ is non-empty&lt;/li&gt;
+&lt;li&gt;$S$ is open&lt;/li&gt;
+&lt;li&gt;$S$ is closed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;then $S = X$.
+&amp;lt;/Callout&amp;gt;
+&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+Suppose that $X$ is connected. Let $S$ be a subset of $X$ satisfying the three properties above, i.e., $S$ is a non-empty clopen subset. If $S$ is a proper subset of $X$, then $X - S$ is also a non-empty, open subset of $X$; $X$ is thus the union of two non-empty, disjoint, open subsets, a contradiction.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Conversely, suppose $X$ is a space satisfying the inductive principle -- that the only non-empty clopen subset of $X$ is $X$. Let $U$ and $V$ be two non-empty, disjoint, open subsets which union to $X$. The set $U = X - V$ is a non-empty, clopen subset of $X$. By the inductive principle on $X$, $U = X$, contradicting the fact that $V$ is non-empty. Since $X$ cannot be disconnected, $X$ is connected.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;This characterization tells us necessary and sufficient conditions that a subset of a connected space must satisfy to be the entire space. If a subset $S$ of a connected space $X$ is defined by a predicate $\phi$ on $X$ as $S = {x \in X : \phi(x)}$, the induction principle for connectedness tells us that $\phi$ is true &lt;em&gt;at every&lt;/em&gt; point of $X$ provided that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\phi(x)$ is true at some point $x \in X$,&lt;/li&gt;
+&lt;li&gt;on $S$, $\phi$ is locally true, meaning that for each inhabitant $x \in S$, there is an open set $U$ such that $x \in U \subseteq S$ and $\phi(u)$ is true for all $u \in U$, and&lt;/li&gt;
+&lt;li&gt;on $X - S$, $\phi$ is locally false.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We have met the first of my three favorite perspectives on connectedness.&lt;/p&gt;
+&lt;p&gt;It is hard not to mention that this last observation leads naturally to the characterization of connectedness by continuous functions into discrete spaces; however, this isn&apos;t one of the three perspectives I will be discussing.&lt;/p&gt;
+&lt;h2&gt;Chain-Connectedness&lt;/h2&gt;
+&lt;p&gt;After learning about chain-connectedness during my undergrad (my original favorite characterization), I found it to be extremely intuitive, easy to visualize, and useful for topological proofs that extend certain local properties on connected spaces to global ones.&lt;/p&gt;
+&lt;h3&gt;Preliminaries&lt;/h3&gt;
+&lt;p&gt;The preliminary notion of a chain is useful for defining chain-connectedness:&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;Chain and Chain-Connected Open Covers&quot; variant=&quot;definition&quot;&amp;gt;
+Let $X$ be a topological space and $\mathcal{U}$ be an open cover of $X$ (a collection of open subsets of $X$ which union to $X$).&lt;/p&gt;
+&lt;p&gt;Given two open subsets $U,V \in \mathcal{U}$, a &lt;em&gt;&lt;strong&gt;chain&lt;/strong&gt;&lt;/em&gt; from $U$ to $V$ in $\mathcal{U}$ is a finite sequnece ${U_0,\dots,U_{n}}$ in $\mathcal{U}$ such that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$U_0 = U$,&lt;/li&gt;
+&lt;li&gt;$U_n = V$, and&lt;/li&gt;
+&lt;li&gt;$U_{i} \cap U_{i + 1} \neq \emptyset$ for each $0 \leq i &amp;lt; n$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For $x \in U$ and $y \in V$, the set ${U_{0},\dots,U_{n}}$ is called a chain from $x$ to $y$ in $\mathcal{U}$.&lt;/p&gt;
+&lt;p&gt;The open cover $\mathcal{U}$ is a &lt;em&gt;&lt;strong&gt;chain-connected open cover&lt;/strong&gt;&lt;/em&gt; if there is a chain between any two non-empty  open sets in $\mathcal{U}$, or equivalently, between any two points of $X$.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;It is worth pointing out again that a chain in an open cover $\mathcal{U}$ must consist of open sets from $\mathcal{U}$.&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;Chain-Connected&quot; variant=&quot;definition&quot;&amp;gt;
+A topological space $X$ is said to be &lt;em&gt;&lt;strong&gt;chain-connected&lt;/strong&gt;&lt;/em&gt; if every open cover of $X$ is a chain-connected open cover of $X$.&lt;/p&gt;
+&lt;p&gt;Explicitly, $X$ is chain-connected if for every open cover $\mathcal{U}$ of $X$ and any two non-empty open sets $U,V \in \mathcal{U}$, there is a finite sequence ${U_{0},\dots,U_{n}}$ in $\mathcal{U}$ such that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$U_{0} = U$,&lt;/li&gt;
+&lt;li&gt;$U_{n} = V$, and&lt;/li&gt;
+&lt;li&gt;$U_{i} \cap U_{i + 1} \neq \emptyset$ for each $0 \leq i &amp;lt; n$.
+&amp;lt;/Callout&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before moving on, let&apos;s contrast this with the notion of path-connectedness:&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;Path and Path-Connected&quot; variant=&quot;definition&quot;&amp;gt;
+A &lt;em&gt;&lt;strong&gt;path&lt;/strong&gt;&lt;/em&gt; in a topological space $X$ is a continuous function $\gamma : I \to X$, where $I = [0,1]$ is the unit interval (with the usual topology).&lt;/p&gt;
+&lt;p&gt;The space $X$ is said to be &lt;em&gt;&lt;strong&gt;path-connected&lt;/strong&gt;&lt;/em&gt; provided that there is a path between any two points of $X$.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;The notion of chain-connectedness may be seen as a discretization of path-connectedness; instead of any two points being joined by a path of points in $X$, roughly, any two open sets (or equivalently, points) are joined by a path of open sets in $X$. This observation suggests a natural visualization of chains and chain-connectedness.&lt;/p&gt;
+&lt;p&gt;The main reason I like chain-connectedness so much is because of its visual and geometric nature which I feel other characterizations lack; it becomes more intuitive after trying to apply it, as we will now.&lt;/p&gt;
+&lt;h3&gt;How Chain-Connectedness is Linked to Connectedness&lt;/h3&gt;
+&lt;p&gt;It is a familiar theorem that every path-connected space is connected. The discrete analogue of this is also true; every chain-connected space is connected. Moreover, these notions of connectedness are equivalent.&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;Chain-Connectedness and Connectedness are Equivalent&quot; variant=&quot;theorem&quot;&amp;gt;
+A topological space $X$ is connected if and only it is chain-connected.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+Apply the induction principle for connectedness!&lt;/p&gt;
+&lt;p&gt;Let $\mathcal{U}$ be an open cover of $X$. Declare two points $x$ and $y$ of $X$ to be equivalent if and only if there is a chain in $\mathcal{U}$ from $x$ to $y$ and write $x \sim y$; indeed, this defines an &lt;a href=&quot;https://en.wikipedia.org/wiki/Equivalence_relation&quot;&gt;equivalence relation&lt;/a&gt; on $X$.&lt;/p&gt;
+&lt;p&gt;Say that $x_0$ is a point of $X$; define $S = {x \in X : x \sim x_0}$.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S$ is non-empty: $x_0 \in S$.&lt;/li&gt;
+&lt;li&gt;$S$ is open: for $x \in S$, there is a chain ${U_0,\dots,U_n} \subseteq \mathcal{U}$ from $x_0$ to $x$. For each $y \in U_n$, the same chain is a chain from $x_0$ to $y$, thus $U_n$ is an open neighborhood of $x$ contained in $S$.&lt;/li&gt;
+&lt;li&gt;$S$ is closed: for $x \in X - S$, there is an open set $U \in \mathcal{U}$ containing $x$. $U$ cannot intersect $S$, since otherwise there would be a chain from $x_0$ to $x$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By the inductive principle for connectedness, $S = X$, thus $X$ is chain-connected.&lt;/p&gt;
+&lt;p&gt;Conversely, suppose $X$ is chain-connected. Let $S$ be a non-empty clopen subset of $X$. The set $\mathcal{U} = {S, X - S}$ is an open cover of $X$, so there is a chain in $\mathcal{U}$ between any two of its non-empty open subsets. No subset of $\mathcal{U}$ forms a chain from $S$ to $X - S$, therefore $X - S$ must be empty, and thus $S = X$. Having demonstrated that $X$ satisfies the induction principle for connectedness, $X$ is connected.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;The above proof shows us how properties that hold locally can be patched together via chains of open sets.&lt;/p&gt;
+&lt;p&gt;The equivalence relation above will be referred to as the equivalence relation determined by chains.&lt;/p&gt;
+&lt;p&gt;Having shown that these two notions of connectedness are equivalent, we have met the second of my three favorite perspectives on connectedness.&lt;/p&gt;
+&lt;h2&gt;The Final Equivalence&lt;/h2&gt;
+&lt;p&gt;Any subset $S$ of a set $X$ induces an equivalence relation $x\sim y$ if and only if $x,y \in S$ or $x,y \in X - S$. If $X$ is a topological space, and $S$ is clopen, then the equivalence classes of $\sim$ are both open. This means that the distinction of points of $X$ by belonging to $S$ or not belonging to $S$ vanishes locally. In a connected space, that is enough for the distinction to vanish globally.&lt;/p&gt;
+&lt;p&gt;This observation leads us to my final favorite perspective on connectedness. At least &lt;a href=&quot;https://math.uchicago.edu/~cstaats/Charles_Staats_III/Teaching_files/connectedness2.pdf&quot;&gt;one other source&lt;/a&gt; calls this the local-to-global lemma. First, it is useful to make precise what I meant by a distinction vanishing locally and globally.&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;(Locally) Trivial Equivalence Relation&quot; variant=&quot;definition&quot;&amp;gt;
+An equivalence relation $\sim$ on a set $X$ is a &lt;em&gt;&lt;strong&gt;trivial relation&lt;/strong&gt;&lt;/em&gt; if $\sim , = X \times X$, that is, if every element of $X$ is related to every other element of $X$, or, if $\sim$ has a single equivalence class.&lt;/p&gt;
+&lt;p&gt;If $\sim$ is a relation on a topological space $X$, $\sim$ is called &lt;em&gt;&lt;strong&gt;locally trivial&lt;/strong&gt;&lt;/em&gt; if there is an open neighborhood $U$ around each point of $X$ on which $x \sim y$ for all $x,y \in U$ (equivalently, if the equivalence classes of $\sim$ are open).
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;Locally trivial equivalence relations are ways to distinguish of points of a space where the distinction vanishes locally, i.e., each point is contained in an open neighborhood where all points are &quot;equal&quot;.&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout title=&quot;The Local-to-Global Lemma&quot; variant=&quot;theorem&quot;&amp;gt;
+A topological space $X$ is connected if and only if every locally trivial &lt;em&gt;equivalence&lt;/em&gt; relation on $X$ is (globally) trivial.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+Suppose $X$ is connected. Let $\sim$ be a locally trivial equivalence relation on $X$. Each equivalence class of $\sim$ is non-empty and clopen. By the induction principle for connectedness, each equivalence class is equal to $X$. The equivalence relation $\sim$ has a unique equivalence class and is therefore trivial.&lt;/p&gt;
+&lt;p&gt;Conversely, let $S$ be a non-empty clopen subset of $X$. The equivalence relation $x \sim y$ if and only if $x,y \in S$ or $x,y \in X - S$ is a locally trivial equivalence relation, and is thus promoted to a globally trivial one. Let $x_0 \in S$. Every element $x \in X$ is related to $x_0$, and so $S = X$. By the induction principle for connectedness, $X$ is connected.
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;The local-to-global lemma frames connectedness as the principle that any distinction which vanishes locally must vanish globally.&lt;/p&gt;
+&lt;p&gt;It is interesting to specialize the above proof of the converse direction to the case when $S$ is defined by a predicate on $X$. It is also interesting to specialize the above proof of the forwards direction when $\sim$ is the equivalence relation determined by chains.&lt;/p&gt;
+&lt;h2&gt;Applications&lt;/h2&gt;
+&lt;p&gt;Here are a few applications of my favorite notions of connectedness.
+&amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
+If $X$ is connected and &lt;a href=&quot;https://en.wikipedia.org/wiki/Locally_connected_space#Definitions&quot;&gt;locally path-connected&lt;/a&gt;, then $X$ is path-connected.&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+Path-connectedness is an equivalence relation on any space; being locally path-connected means that it is a locally trivial equivalence relation (locally, any two points are equivalent). By the local-to-global lemma, $X$ is path-connected.
+&amp;lt;/Callout&amp;gt;
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
+Every &lt;a href=&quot;https://en.wikipedia.org/wiki/Locally_constant_function#Definition&quot;&gt;locally constant function&lt;/a&gt; on a connected space $X$ is constant.&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+Let $f : X \to Y$ be a locally constant function on a connected space $X$.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Say that $x \sim y$ if and only if $f(x) = f(y)$. Any distinctions among points with respect to $\sim$ vanishes locally ($f$ is locally constant); by the local-to-global lemma, $f$ is constant.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;/Callout&amp;gt;
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
+The product of finitely many connected spaces is connected.
+&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+By induction, it suffices to show that the product of two connected spaces is connected. We use chain-connectedness.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Let $X$ and $Y$ be connected and $\mathcal{U}$ an open cover of $X \times Y$. The projection $\pi_X : X \times Y \to X$ is an open map, and so $\pi_X(\mathcal{U}) = \{\pi_X(U) : U \in \mathcal{U}\}$ is an open cover of $X$, likewise for $Y$. 
+
+Given $(a,b),(c,d) \in X \times Y$, there is a finite chain $\{\pi_X(U_0),\dots,\pi_X(U_n)\}$ in $\pi_X(\mathcal{U})$ from $a$ to $c$. Likewise, there is a finite chain $\{\pi_Y(V_0),\dots,\pi_Y(V_m)\}$ in $\pi_Y(\mathcal{U})$ from $b$ to $d$. The set $\{U_0,\dots,U_n,V_0,\dots,V_m\}$ is a chain in $\mathcal{U}$ from $(a,b)$ to $(c,d)$ since $(c,b) \in U_n \cap V_0$.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;/Callout&amp;gt;
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
+If $A$ is a connected subspace of $X$, if $A \subseteq B \subseteq \mathtt{cl},A$, then $B$ is connected.&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+We use chain-connectedness.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Let $\mathcal{U}$ be an open cover of $B$ and fix $x,y \in B$. There are four cases:
+
+1. $(x \in A, y \in A)$ There is a chain in $\mathcal{U}$ from $x$ to $y$ since $A$ is connected.
+
+2. $(x \in A, y \in B - A)$ In this case, $y$ is a limit point of $A$; there is some neighborhood $U \in \mathcal{U}$ of $y$ and some $z \in U \cap (A - \{y\})$. By (chain-)connectedness of $A$, there is a chain in $\mathcal{U}$ from $x$ to $z$. Appending $U$ to this chain produces a chain in $\mathcal{U}$ from $x$ to $y$.
+
+3. $(x \in B - A, y \in A)$ This case is symmetric.
+
+4. $(x \in B - A, y \in B - A)$ Just as in case 2., there is an open set $U_y \in \mathcal{U}$ containing $y$ and some $z_y \in U_y \cap (A - \{y\})$; likewise for $x$. By (chain-)connectedness of $A$, is a chain in $\mathcal{U}$ from $z_x$ to $z_y$. Prepending $U_x$ and appending $U_y$ yields a chain from $x$ to $y$ in $\mathcal{U}$.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;/Callout&amp;gt;
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;This next batch of applications uses a bit more machinery, so I will only give proof sketches.
+{/* TODO */}&lt;/p&gt;
+&lt;h2&gt;Closing Thoughts&lt;/h2&gt;
+&lt;p&gt;{/* TODO */}&lt;/p&gt;
+&lt;p&gt;{/*
+List of applications:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;*** need to check that locally euclidean hausdorff &amp;amp; second countable &amp;lt;=&amp;gt; paracompact + countably many components
+this is exercise 4-31 of ITM&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On a connected smooth manifold, there is a smooth isotopy between any two points&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These last two require a lemma about the unit ball in R^n. Need a diffeo taking p to q stabilizing the boundary of the closed unit ball.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Let M be a connected smooth manifold, and p,q in M. There is a diffeomorphism F : M -&amp;gt; M such that F(p) = q.
+(homeo/diffeomorphisms act transitively on topological/smooth manfiolds)&lt;/li&gt;
+&lt;li&gt;https://math.stackexchange.com/questions/3400734/every-connected-topological-manifold-has-a-homeomorphism-taking-p-i-to-q-i-f (this is a little bit involved)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;https://math.uchicago.edu/~cstaats/Charles_Staats_III/Notes_and_papers_files/connectedness2.pdf
+*/}&lt;/p&gt;
+</content:encoded><author>c squared</author></item></channel></rss>
