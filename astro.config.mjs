@@ -25,12 +25,12 @@ import remarkGemoji from './src/plugins/remark-gemoji' /* for shortcode emoji su
 import rehypePixelated from './src/plugins/rehype-pixelated' /* Custom plugin to handle pixelated images */
 
 // From astro-erudite
-import vercel from '@astrojs/vercel'
+// import vercel from '@astrojs/vercel'
 import icon from 'astro-icon'
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: vercel(),
+  // adapter: vercel(),
   site: siteConfig.site,
   trailingSlash: siteConfig.trailingSlashes ? 'always' : 'never',
   prefetch: true,
