@@ -61,6 +61,7 @@ Related is the notion of [compactness as an induction principle](https://www.drm
 
 After learning about chain-connectedness during my undergrad (my original favorite characterization), I found it to be extremely intuitive, easy to visualize, and made certain proofs more transparent. Additionally, like its topological counterpart -- compactness --  chain-connectedness is a characterization of connectedness in terms of open covers. 
 
+
 ### Definitions
 
 The preliminary notion of a chain is useful for defining chain-connectedness:
@@ -138,10 +139,10 @@ This observation leads us to my final favorite perspective on connectedness. At 
 <Callout title="(Locally) Trivial Equivalence Relation" variant="definition">
   An equivalence relation $\sim$ on a set $X$ is ***trivial*** if $\sim \, = X \times X$, that is, if every element of $X$ is related to every other element of $X$, or, if $\sim$ has a single equivalence class. 
 
-  If $\sim$ is a relation on a topological space $X$, $\sim$ is called ***locally trivial*** if there is an open neighborhood $U$ around each point of $X$ on which $x \sim y$ for all $x,y \in U$ (equivalently, if the equivalence classes of $\sim$ are open).
+  If $\sim$ is an equivalence relation on a topological space $X$, $\sim$ is called ***locally trivial*** if there is an open neighborhood $U$ around each point of $X$ on which $x \sim y$ for all $x,y \in U$ (equivalently, if the equivalence classes of $\sim$ are open).
 </Callout>
 
-Locally trivial equivalence relations are ways to distinguish of points of a space where the distinction vanishes locally, i.e., each point is contained in an open neighborhood where all points are "equal".
+Locally trivial equivalence relations are ways to distinguish points of a space where the distinction vanishes locally, i.e., each point is contained in an open neighborhood where all points are "equal".
 
 <Callout title="The Local-to-Global Lemma" variant="theorem">
   A topological space $X$ is connected if and only if every locally trivial equivalence relation on $X$ is (globally) trivial.
@@ -211,7 +212,6 @@ Here are a few applications of my favorite notions of connectedness.
 The first two propositions above can also be proven using chain-connectedness, which shows more explicitly how to patch together the local data into global data.
 
 This next batch of applications uses a bit more machinery, so I will only give proof sketches.
-{/* TODO */}
 
 Here is an adaptation of Problem 4-31 from Lee's Introduction to Topological Manifolds. 
 <Callout variant="proposition">
@@ -235,18 +235,20 @@ For each point $p$ of the open unit ball $\mathbb{B}^n$ of $\mathbb{R}^n$, there
 By solving the problem locally, we obtain the following homogeneity result:
 
 <Callout variant="proposition">
-  Let $M$ be a connected manifold (topological or differentiable of any order). The homeomorphism/diffeomorphism group of $M$ acts transitively on $M$. Moreover, such a homeomorphism/diffeomorphism can be chosen to be (smoothly) isotopic to the identity. 
+  Let $M$ be a connected smooth manifold. The diffeomorphism group of $M$ acts transitively on $M$. Moreover, between any two points, one can choose a diffeomorphism between them which is smoothly isotopic to the identity.
   <Callout variant="proof" defaultOpen={false}>
-    Say two points $x,y$ of $M$ are equivalent if there is homeomorphism/diffeomorphism taking $x$ to $y$. This determines a locally trivial equivalence relation. By the local-to-global lemma, any two points of $M$ are related by a homeomorphism/diffeomorphism.
+    Say two points $x,y$ of $M$ are equivalent if there is diffeomorphism which is smoothly isotopic to the identity and takes $x$ to $y$. This determines a locally trivial equivalence relation. By the local-to-global lemma, any two points of $M$ are related by a diffeomorphism.
   </Callout>
 </Callout>
 
-A closely related result is Problem 5-4 from Lee's Introduction to Topological Manifolds:
+A closely related result is (an adaptation of) Problem 5-4 from Lee's Introduction to Topological Manifolds:
 <Callout variant="proposition">
-  Let $M$ be a connected manifold (topological or differentiably of any order) of dimension $2$ or greater. Let $(p_1,\dots,p_k)$ and $(q_1,\dots,q_k)$ be ordered $k$-tuples of points in $M$. There is a homeomorphism/diffeomorphism $F : M \to M$ such that $F(p_i) = q_i$ for each $i = 1,\dots,k$. 
+  Let $M$ be a connected manifold  of dimension $2$ or greater. Let $(p_1,\dots,p_k)$ and $(q_1,\dots,q_k)$ be ordered $k$-tuples of points in $M$. There is a diffeomorphism $F : M \to M$ such that $F(p_i) = q_i$ for each $i = 1,\dots,k$. 
   <Callout variant="proof" defaultOpen={false}>
     Following the sketch outlined [here](https://math.stackexchange.com/questions/3400734/every-connected-topological-manifold-has-a-homeomorphism-taking-p-i-to-q-i-f), the equivalence relation described is a locally trivial one, so one can repeatedly apply the local-to-global lemma to obtain the result. 
   </Callout>
 </Callout>
+
+The last two results results also hold in settings of varying degrees of smoothness by replacing diffeomorphism with $C^k$-diffeomorphism or homeomorphism and weakening or removing the smoothness requirements.
 
 Let me know if you can think of any more applications of these characterizations of connectedness!

@@ -431,9 +431,9 @@ Apply the induction principle for connectedness!&lt;/p&gt;
 &lt;p&gt;This observation leads us to my final favorite perspective on connectedness. At least &lt;a href=&quot;https://math.uchicago.edu/~cstaats/Charles_Staats_III/Teaching_files/connectedness2.pdf&quot;&gt;one other source&lt;/a&gt; calls this the local-to-global lemma. First, it is useful to make precise what is meant by a distinction vanishing locally and globally.&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout title=&quot;(Locally) Trivial Equivalence Relation&quot; variant=&quot;definition&quot;&amp;gt;
 An equivalence relation $\sim$ on a set $X$ is &lt;em&gt;&lt;strong&gt;trivial&lt;/strong&gt;&lt;/em&gt; if $\sim , = X \times X$, that is, if every element of $X$ is related to every other element of $X$, or, if $\sim$ has a single equivalence class.&lt;/p&gt;
-&lt;p&gt;If $\sim$ is a relation on a topological space $X$, $\sim$ is called &lt;em&gt;&lt;strong&gt;locally trivial&lt;/strong&gt;&lt;/em&gt; if there is an open neighborhood $U$ around each point of $X$ on which $x \sim y$ for all $x,y \in U$ (equivalently, if the equivalence classes of $\sim$ are open).
+&lt;p&gt;If $\sim$ is an equivalence relation on a topological space $X$, $\sim$ is called &lt;em&gt;&lt;strong&gt;locally trivial&lt;/strong&gt;&lt;/em&gt; if there is an open neighborhood $U$ around each point of $X$ on which $x \sim y$ for all $x,y \in U$ (equivalently, if the equivalence classes of $\sim$ are open).
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
-&lt;p&gt;Locally trivial equivalence relations are ways to distinguish of points of a space where the distinction vanishes locally, i.e., each point is contained in an open neighborhood where all points are &quot;equal&quot;.&lt;/p&gt;
+&lt;p&gt;Locally trivial equivalence relations are ways to distinguish points of a space where the distinction vanishes locally, i.e., each point is contained in an open neighborhood where all points are &quot;equal&quot;.&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout title=&quot;The Local-to-Global Lemma&quot; variant=&quot;theorem&quot;&amp;gt;
 A topological space $X$ is connected if and only if every locally trivial equivalence relation on $X$ is (globally) trivial.
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
@@ -486,8 +486,7 @@ We use chain-connectedness.&lt;/p&gt;
 &lt;p&gt;&amp;lt;/Callout&amp;gt;
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
 &lt;p&gt;The first two propositions above can also be proven using chain-connectedness, which shows more explicitly how to patch together the local data into global data.&lt;/p&gt;
-&lt;p&gt;This next batch of applications uses a bit more machinery, so I will only give proof sketches.
-{/* TODO */}&lt;/p&gt;
+&lt;p&gt;This next batch of applications uses a bit more machinery, so I will only give proof sketches.&lt;/p&gt;
 &lt;p&gt;Here is an adaptation of Problem 4-31 from Lee&apos;s Introduction to Topological Manifolds.
 &amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
 Let $X$ be &lt;a href=&quot;https://en.wikipedia.org/wiki/Topological_manifold#Formal_definition&quot;&gt;locally Euclidean&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Hausdorff_space#Definitions&quot;&gt;Hausdorff&lt;/a&gt; of dimension $n$ and &lt;a href=&quot;https://en.wikipedia.org/wiki/Paracompact_space#Definition&quot;&gt;paracompact&lt;/a&gt;.&lt;/p&gt;
@@ -505,17 +504,18 @@ Any locally Euclidean Hausdorff space of dimension $n$ which can be covered by c
 &lt;p&gt;For each point $p$ of the open unit ball $\mathbb{B}^n$ of $\mathbb{R}^n$, there is a smooth diffeomorphism of $\mathbb{R}^n$ which is the identity outside of $\mathbb{B}^n$ and takes the origin to $p$. Such a map can be chosen to be smoothly isotopic to the identity -- a description can be found in Milnor&apos;s &lt;a href=&quot;https://webhomes.maths.ed.ac.uk/~v1ranick/papers/milnortop.pdf&quot;&gt;&lt;em&gt;Topology from a Differentiable Viewpoint&lt;/em&gt;&lt;/a&gt; on pages 23 and 24.&lt;/p&gt;
 &lt;p&gt;By solving the problem locally, we obtain the following homogeneity result:&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
-Let $M$ be a connected manifold (topological or differentiable of any order). The homeomorphism/diffeomorphism group of $M$ acts transitively on $M$. Moreover, such a homeomorphism/diffeomorphism can be chosen to be (smoothly) isotopic to the identity.
+Let $M$ be a connected smooth manifold. The diffeomorphism group of $M$ acts transitively on $M$. Moreover, between any two points, one can choose a diffeomorphism between them which is smoothly isotopic to the identity.
 &amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
-Say two points $x,y$ of $M$ are equivalent if there is homeomorphism/diffeomorphism taking $x$ to $y$. This determines a locally trivial equivalence relation. By the local-to-global lemma, any two points of $M$ are related by a homeomorphism/diffeomorphism.
+Say two points $x,y$ of $M$ are equivalent if there is diffeomorphism which is smoothly isotopic to the identity and takes $x$ to $y$. This determines a locally trivial equivalence relation. By the local-to-global lemma, any two points of $M$ are related by a diffeomorphism.
 &amp;lt;/Callout&amp;gt;
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
-&lt;p&gt;A closely related result is Problem 5-4 from Lee&apos;s Introduction to Topological Manifolds:
+&lt;p&gt;A closely related result is (an adaptation of) Problem 5-4 from Lee&apos;s Introduction to Topological Manifolds:
 &amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
-Let $M$ be a connected manifold (topological or differentiably of any order) of dimension $2$ or greater. Let $(p_1,\dots,p_k)$ and $(q_1,\dots,q_k)$ be ordered $k$-tuples of points in $M$. There is a homeomorphism/diffeomorphism $F : M \to M$ such that $F(p_i) = q_i$ for each $i = 1,\dots,k$.
+Let $M$ be a connected manifold  of dimension $2$ or greater. Let $(p_1,\dots,p_k)$ and $(q_1,\dots,q_k)$ be ordered $k$-tuples of points in $M$. There is a diffeomorphism $F : M \to M$ such that $F(p_i) = q_i$ for each $i = 1,\dots,k$.
 &amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
 Following the sketch outlined &lt;a href=&quot;https://math.stackexchange.com/questions/3400734/every-connected-topological-manifold-has-a-homeomorphism-taking-p-i-to-q-i-f&quot;&gt;here&lt;/a&gt;, the equivalence relation described is a locally trivial one, so one can repeatedly apply the local-to-global lemma to obtain the result.
 &amp;lt;/Callout&amp;gt;
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;The last two results results also hold in settings of varying degrees of smoothness by replacing diffeomorphism with $C^k$-diffeomorphism or homeomorphism and weakening or removing the smoothness requirements.&lt;/p&gt;
 &lt;p&gt;Let me know if you can think of any more applications of these characterizations of connectedness!&lt;/p&gt;
 </content:encoded><author>c squared</author></item></channel></rss>
