@@ -163,9 +163,9 @@ To increase the article width, we can change maximum width parameter (I changed 
 
 ### Setting Up Giscus 
 
-Setting up Giscus was relatively straightforward by following the directions found on the [giscus.app](http://giscus.app). The one thing that was confusing for me was setting up the `giscus.json` and using the `origins` key correctly. The below can be found at [Advanced Usage Giscus Documentation](https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md).
+Setting up Giscus was relatively straightforward by following the directions found on the [giscus.app](http://giscus.app). The one thing that was confusing for me was setting up the `giscus.json` and using the `origins` key correctly. The below can be found at [Advanced Usage Giscus Documentation](https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md). 
 
-The `origins` field is used to control the domains can read from and write to the GitHub discussions on your blog's repository. The `origins` key accepts a list of strings that are checked against the `window.origin` of the page that loads Giscus. Another key that the `giscus.json` accepts is the `originsRegex` key, which accepts a regular expression representing a set of domain names to be tested against the `window.origin` of the page that loads Giscus. 
+The `origins` field is used to control the domains can read from and write to the GitHub discussions on your blog's repository. The `origins` key accepts a list of strings that are checked against the `window.origin` of the page that loads Giscus. Another key that the `giscus.json` accepts is the `originsRegex` key, which accepts a regular expression representing a set of domain names to be tested against the `window.origin` of the page that loads Giscus.
 
 An example `giscus.json` looks like this:
 
