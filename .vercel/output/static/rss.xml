@@ -340,23 +340,18 @@ The class of final functors and discrete fibrations forms an orthogonal factoriz
 &lt;h3&gt;Staying Synced with stelcodes&lt;/h3&gt;
 &lt;p&gt;Since I forked this template from &lt;a href=&quot;https://github.com/stelcodes/multiterm-astro&quot;&gt;stelcodes/multiterm-astro&lt;/a&gt;, I wanted my fork to stay up to date with the original repository. To do so, I followed &lt;a href=&quot;https://github.com/orgs/community/discussions/153608&quot;&gt;this guide&lt;/a&gt;.&lt;/p&gt;
 </content:encoded><author>c squared</author></item><item><title>Three Connected Perspectives</title><link>https://csquared-blog.com/posts/three-connected-perspectives</link><guid isPermaLink="true">https://csquared-blog.com/posts/three-connected-perspectives</guid><description>A discussion about three perspectives on the notion of connectedness in topology and how they are related.</description><pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate><content:encoded>&lt;p&gt;import Callout from &apos;~/components/Callout.astro&apos;&lt;/p&gt;
-&lt;p&gt;This blog post was originally supposed to be about my one of my favorite characterizations of connectedness called &lt;em&gt;chain-connectedness&lt;/em&gt;. After a few drafts, I realized that chain-connectedness isn&apos;t rich enough for an entire post. I also realized that, while visually appealing, chain-connectedness isn&apos;t the most suitable notion of connectedness for some applications. My perspective on connectedness has recently grown, and I now have a trifecta of favorite characterizations of connectedness.&lt;/p&gt;
-&lt;p&gt;{/* TODOL Fix this intro. merge with current one&lt;/p&gt;
-&lt;p&gt;Connectedness admits many equivalent characterizations, each emphasizing a different aspect of how local data constrains global structure. Some are algebraic, some geometric, and some combinatorial.&lt;/p&gt;
-&lt;p&gt;This post grew out of an attempt to write about one such characterization — chain-connectedness — which I originally found especially intuitive and visually appealing. In the process, I realized that chain-connectedness is best understood not in isolation, but as part of a small constellation of ideas that all express the same underlying principle: in a connected space, distinctions that disappear locally cannot persist globally.&lt;/p&gt;
-&lt;p&gt;In what follows, I’ll describe three equivalent perspectives on connectedness — via clopen subsets, chains of open sets, and locally trivial equivalence relations — and explain how each highlights a different way that local information propagates across a space. */}&lt;/p&gt;
-&lt;p&gt;{/* I originally planned to write about chain-connectedness, a characterization of connectedness I find particularly intuitive. While developing the idea, I realized that chain-connectedness is best understood as part of a broader picture involving two other, complementary perspectives. This post presents all three. */}&lt;/p&gt;
+&lt;p&gt;This article was originally intended to be about a notion of connectedness -- &lt;em&gt;chain-connectedness&lt;/em&gt; -- which I find especially intuitive and visually appealing. In the process of writing, I realized that in practice, chain-connectedness isn&apos;t always the most efficient or appealing proof method. Often, it is easier to prove that some property holds locally, in a neighborhood of each point, than to prove it holds globally, for an entire space. Chain-connectedness offers a visual interpretation for &lt;em&gt;how&lt;/em&gt; such local properties are patched together and extended to global ones, but it does not explicitly characterize &lt;em&gt;which&lt;/em&gt; local properties can be extended to global ones.&lt;/p&gt;
+&lt;p&gt;In what follows, I describe my three favorite characterizations of connectedness and explain how they are related. The first frames connectedness as a type of structural induction, the explanation of which I delegate to another blog; the second is chain-connectedness, a discretization of path-connectedness; the final characterization makes precise which local properties can be extended to global ones and frames connectedness as the principle that any distinction of points which vanishes locally must vanish globally.&lt;/p&gt;
 &lt;p&gt;:::note
 The empty set vacuously satisfies all of the equivalent characterizations of connectedness that follow. Regardless of your personal convention -- whether or not the empty set is connected -- we can assume, without loss of generality, that all spaces $X$ are non-empty from this point on.
 :::&lt;/p&gt;
-&lt;p&gt;Before discussing chain-connectedness, I want to first introduce the idea of connectedness as an induction principle.&lt;/p&gt;
 &lt;h2&gt;Connectedness as an Induction Principle&lt;/h2&gt;
 &lt;p&gt;Our initial characterization of connectedness will be as follows:&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout title=&quot;Connected&quot; variant=&quot;definition&quot;&amp;gt;
 A topological space $X$ is said to be &lt;em&gt;&lt;strong&gt;disconnected&lt;/strong&gt;&lt;/em&gt; provided that there exists two non-empty, disjoint, open subsets of $X$ which union to $X$. The space $X$ is said to be &lt;em&gt;&lt;strong&gt;connected&lt;/strong&gt;&lt;/em&gt; provided that it is not disconnected.
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
 &lt;p&gt;Intuitively, this notion of connectedness says that the non-empty open subsets of $X$ cannot separate $X$.&lt;/p&gt;
-&lt;p&gt;Over at &lt;a href=&quot;https://pseudonium.github.io/&quot;&gt;Pseudonium&apos;s Blog&lt;/a&gt;, &lt;a href=&quot;https://pseudonium.github.io/2025/09/17/Connectedness_As_Induction.html&quot;&gt;connectedness as an induction Principle&lt;/a&gt; is motivated by and generalizes &lt;a href=&quot;https://arxiv.org/abs/1208.0973&quot;&gt;real induction&lt;/a&gt;. Roughly, the induction principle characterizes a connected space by its clopen subsets, of which there can only be two -- the whole space and the empty space.&lt;/p&gt;
+&lt;p&gt;Over at &lt;a href=&quot;https://pseudonium.github.io/&quot;&gt;Pseudonium&apos;s Blog&lt;/a&gt;, &lt;a href=&quot;https://pseudonium.github.io/2025/09/17/Connectedness_As_Induction.html&quot;&gt;connectedness as an induction principle&lt;/a&gt; is motivated by and generalizes &lt;a href=&quot;https://arxiv.org/abs/1208.0973&quot;&gt;real induction&lt;/a&gt;. Roughly, the induction principle characterizes a connected space by its clopen subsets, of which there can only be two -- the whole space and the empty space.&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout title=&quot;Induction Principle for Connectedness&quot; variant=&quot;theorem&quot;&amp;gt;
 A topological space $X$ is connected if and only if for every subset $S$ of $X$ such that&lt;/p&gt;
 &lt;ul&gt;
@@ -371,17 +366,18 @@ Suppose that $X$ is connected. Let $S$ be a subset of $X$ satisfying the three p
 &lt;pre&gt;&lt;code&gt;Conversely, suppose $X$ is a space satisfying the inductive principle -- that the only non-empty clopen subset of $X$ is $X$. Let $U$ and $V$ be two non-empty, disjoint, open subsets which union to $X$. The set $U = X - V$ is a non-empty, clopen subset of $X$. By the inductive principle on $X$, $U = X$, contradicting the fact that $V$ is non-empty. Since $X$ cannot be disconnected, $X$ is connected.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;lt;/Callout&amp;gt;&lt;/p&gt;
-&lt;p&gt;This characterization tells us necessary and sufficient conditions that a subset of a connected space must satisfy to be the entire space. If a subset $S$ of a connected space $X$ is defined by a predicate $\phi$ on $X$ as $S = {x \in X : \phi(x)}$, the induction principle for connectedness tells us that $\phi$ is true &lt;em&gt;at every&lt;/em&gt; point of $X$ provided that&lt;/p&gt;
+&lt;p&gt;This characterization describes necessary and sufficient conditions that a subset of a connected space must satisfy to be the entire space. If a subset $S$ of a connected space $X$ is defined by a predicate $\phi$ on $X$ as $S = {x \in X : \phi(x)}$, the induction principle for connectedness states that $\phi$ is true &lt;em&gt;at every&lt;/em&gt; point of $X$ provided that&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$\phi(x)$ is true at some point $x \in X$,&lt;/li&gt;
+&lt;li&gt;$\phi(x)$ is true at some point $x \in S$,&lt;/li&gt;
 &lt;li&gt;on $S$, $\phi$ is locally true, meaning that for each inhabitant $x \in S$, there is an open set $U$ such that $x \in U \subseteq S$ and $\phi(u)$ is true for all $u \in U$, and&lt;/li&gt;
 &lt;li&gt;on $X - S$, $\phi$ is locally false.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We have met the first of my three favorite perspectives on connectedness.&lt;/p&gt;
 &lt;p&gt;It is hard not to mention that this last observation leads naturally to the characterization of connectedness by continuous functions into discrete spaces; however, this isn&apos;t one of the three perspectives I will be discussing.&lt;/p&gt;
+&lt;p&gt;Related is the notion of &lt;a href=&quot;https://www.drmaciver.com/2015/03/topological-compactness-is-an-induction-principle/&quot;&gt;compactness as an induction principle&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Chain-Connectedness&lt;/h2&gt;
-&lt;p&gt;After learning about chain-connectedness during my undergrad (my original favorite characterization), I found it to be extremely intuitive, easy to visualize, and useful for topological proofs that extend certain local properties on connected spaces to global ones.&lt;/p&gt;
-&lt;h3&gt;Preliminaries&lt;/h3&gt;
+&lt;p&gt;After learning about chain-connectedness during my undergrad (my original favorite characterization), I found it to be extremely intuitive, easy to visualize, and made certain proofs more transparent. Additionally, like its topological counterpart -- compactness --  chain-connectedness is a characterization of connectedness in terms of open covers.&lt;/p&gt;
+&lt;h3&gt;Definitions&lt;/h3&gt;
 &lt;p&gt;The preliminary notion of a chain is useful for defining chain-connectedness:&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout title=&quot;Chain and Chain-Connected Open Covers&quot; variant=&quot;definition&quot;&amp;gt;
 Let $X$ be a topological space and $\mathcal{U}$ be an open cover of $X$ (a collection of open subsets of $X$ which union to $X$).&lt;/p&gt;
@@ -391,10 +387,10 @@ Let $X$ be a topological space and $\mathcal{U}$ be an open cover of $X$ (a coll
 &lt;li&gt;$U_n = V$, and&lt;/li&gt;
 &lt;li&gt;$U_{i} \cap U_{i + 1} \neq \emptyset$ for each $0 \leq i &amp;lt; n$.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;For $x \in U$ and $y \in V$, the set ${U_{0},\dots,U_{n}}$ is called a chain from $x$ to $y$ in $\mathcal{U}$.&lt;/p&gt;
+&lt;p&gt;For $x \in U$ and $y \in V$, the sequence ${U_{0},\dots,U_{n}}$ is called a chain from $x$ to $y$ in $\mathcal{U}$.&lt;/p&gt;
 &lt;p&gt;The open cover $\mathcal{U}$ is a &lt;em&gt;&lt;strong&gt;chain-connected open cover&lt;/strong&gt;&lt;/em&gt; if there is a chain between any two non-empty  open sets in $\mathcal{U}$, or equivalently, between any two points of $X$.
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
-&lt;p&gt;It is worth pointing out again that a chain in an open cover $\mathcal{U}$ must consist of open sets from $\mathcal{U}$.&lt;/p&gt;
+&lt;p&gt;As the name suggests, the open sets of a chain (in an open cover) form the chain links, and they are linked together by having non-trivial overlap. Just like jewelry, chains can loop back on themselves and have repeated links.&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout title=&quot;Chain-Connected&quot; variant=&quot;definition&quot;&amp;gt;
 A topological space $X$ is said to be &lt;em&gt;&lt;strong&gt;chain-connected&lt;/strong&gt;&lt;/em&gt; if every open cover of $X$ is a chain-connected open cover of $X$.&lt;/p&gt;
 &lt;p&gt;Explicitly, $X$ is chain-connected if for every open cover $\mathcal{U}$ of $X$ and any two non-empty open sets $U,V \in \mathcal{U}$, there is a finite sequence ${U_{0},\dots,U_{n}}$ in $\mathcal{U}$ such that&lt;/p&gt;
@@ -411,8 +407,8 @@ A &lt;em&gt;&lt;strong&gt;path&lt;/strong&gt;&lt;/em&gt; in a topological space 
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
 &lt;p&gt;The notion of chain-connectedness may be seen as a discretization of path-connectedness; instead of any two points being joined by a path of points in $X$, roughly, any two open sets (or equivalently, points) are joined by a path of open sets in $X$. This observation suggests a natural visualization of chains and chain-connectedness.&lt;/p&gt;
 &lt;p&gt;The main reason I like chain-connectedness so much is because of its visual and geometric nature which I feel other characterizations lack; it becomes more intuitive after trying to apply it, as we will now.&lt;/p&gt;
-&lt;h3&gt;How Chain-Connectedness is Linked to Connectedness&lt;/h3&gt;
-&lt;p&gt;It is a familiar theorem that every path-connected space is connected. The discrete analogue of this is also true; every chain-connected space is connected. Moreover, these notions of connectedness are equivalent.&lt;/p&gt;
+&lt;h3&gt;The Link to Connectedness&lt;/h3&gt;
+&lt;p&gt;It is a familiar theorem that every path-connected space is connected. The discrete analogue of this is also true; every chain-connected space is connected. As suggested, these notions of connectedness are also equivalent.&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout title=&quot;Chain-Connectedness and Connectedness are Equivalent&quot; variant=&quot;theorem&quot;&amp;gt;
 A topological space $X$ is connected if and only it is chain-connected.
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
@@ -422,31 +418,30 @@ Apply the induction principle for connectedness!&lt;/p&gt;
 &lt;p&gt;Say that $x_0$ is a point of $X$; define $S = {x \in X : x \sim x_0}$.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;$S$ is non-empty: $x_0 \in S$.&lt;/li&gt;
-&lt;li&gt;$S$ is open: for $x \in S$, there is a chain ${U_0,\dots,U_n} \subseteq \mathcal{U}$ from $x_0$ to $x$. For each $y \in U_n$, the same chain is a chain from $x_0$ to $y$, thus $U_n$ is an open neighborhood of $x$ contained in $S$.&lt;/li&gt;
+&lt;li&gt;$S$ is open: for $x \in S$, there is a chain ${U_0,\dots,U_n}$ in $\mathcal{U}$ from $x_0$ to $x$. For each $y \in U_n$, the same chain is a chain from $x_0$ to $y$, thus $U_n$ is an open neighborhood of $x$ contained in $S$.&lt;/li&gt;
 &lt;li&gt;$S$ is closed: for $x \in X - S$, there is an open set $U \in \mathcal{U}$ containing $x$. $U$ cannot intersect $S$, since otherwise there would be a chain from $x_0$ to $x$.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;By the inductive principle for connectedness, $S = X$, thus $X$ is chain-connected.&lt;/p&gt;
-&lt;p&gt;Conversely, suppose $X$ is chain-connected. Let $S$ be a non-empty clopen subset of $X$. The set $\mathcal{U} = {S, X - S}$ is an open cover of $X$, so there is a chain in $\mathcal{U}$ between any two of its non-empty open subsets. No subset of $\mathcal{U}$ forms a chain from $S$ to $X - S$, therefore $X - S$ must be empty, and thus $S = X$. Having demonstrated that $X$ satisfies the induction principle for connectedness, $X$ is connected.
+&lt;p&gt;Conversely, suppose $X$ is chain-connected. Let $S$ be a non-empty clopen subset of $X$. The set $\mathcal{U} = {S, X - S}$ is an open cover of $X$, so there is a chain in $\mathcal{U}$ between any two of its non-empty open subsets. No finite sequence in $\mathcal{U}$ can form a chain from $S$ to $X - S$; therefore $X - S$ must be empty, i.e., $S = X$. Having demonstrated that $X$ satisfies the induction principle for connectedness, $X$ is connected.
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
-&lt;p&gt;The above proof shows us how properties that hold locally can be patched together via chains of open sets.&lt;/p&gt;
 &lt;p&gt;The equivalence relation above will be referred to as the equivalence relation determined by chains.&lt;/p&gt;
 &lt;p&gt;Having shown that these two notions of connectedness are equivalent, we have met the second of my three favorite perspectives on connectedness.&lt;/p&gt;
-&lt;h2&gt;The Final Equivalence&lt;/h2&gt;
-&lt;p&gt;Any subset $S$ of a set $X$ induces an equivalence relation $x\sim y$ if and only if $x,y \in S$ or $x,y \in X - S$. If $X$ is a topological space, and $S$ is clopen, then the equivalence classes of $\sim$ are both open. This means that the distinction of points of $X$ by belonging to $S$ or not belonging to $S$ vanishes locally. In a connected space, that is enough for the distinction to vanish globally.&lt;/p&gt;
-&lt;p&gt;This observation leads us to my final favorite perspective on connectedness. At least &lt;a href=&quot;https://math.uchicago.edu/~cstaats/Charles_Staats_III/Teaching_files/connectedness2.pdf&quot;&gt;one other source&lt;/a&gt; calls this the local-to-global lemma. First, it is useful to make precise what I meant by a distinction vanishing locally and globally.&lt;/p&gt;
+&lt;h2&gt;Connectedness as a Local-to-Global Principle&lt;/h2&gt;
+&lt;p&gt;Any subset $S$ of a set $X$ induces an equivalence relation $x\sim y$ if and only if $x,y \in S$ or $x,y \in X - S$. If $X$ is a topological space, and $S$ is clopen, then the equivalence classes of $\sim$, $S$ and $X - S$, are both open. If we think of equivalence relations as a way to distinguish points of a space, the distinction of points of $X$ by belonging to $S$ or not belonging to $S$ vanishes locally. In a connected space, that is enough for the distinction to vanish globally; therefore, if $X$ is connected, and $S$ is non-empty, then $S = X$.&lt;/p&gt;
+&lt;p&gt;This observation leads us to my final favorite perspective on connectedness. At least &lt;a href=&quot;https://math.uchicago.edu/~cstaats/Charles_Staats_III/Teaching_files/connectedness2.pdf&quot;&gt;one other source&lt;/a&gt; calls this the local-to-global lemma. First, it is useful to make precise what is meant by a distinction vanishing locally and globally.&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout title=&quot;(Locally) Trivial Equivalence Relation&quot; variant=&quot;definition&quot;&amp;gt;
-An equivalence relation $\sim$ on a set $X$ is a &lt;em&gt;&lt;strong&gt;trivial relation&lt;/strong&gt;&lt;/em&gt; if $\sim , = X \times X$, that is, if every element of $X$ is related to every other element of $X$, or, if $\sim$ has a single equivalence class.&lt;/p&gt;
+An equivalence relation $\sim$ on a set $X$ is &lt;em&gt;&lt;strong&gt;trivial&lt;/strong&gt;&lt;/em&gt; if $\sim , = X \times X$, that is, if every element of $X$ is related to every other element of $X$, or, if $\sim$ has a single equivalence class.&lt;/p&gt;
 &lt;p&gt;If $\sim$ is a relation on a topological space $X$, $\sim$ is called &lt;em&gt;&lt;strong&gt;locally trivial&lt;/strong&gt;&lt;/em&gt; if there is an open neighborhood $U$ around each point of $X$ on which $x \sim y$ for all $x,y \in U$ (equivalently, if the equivalence classes of $\sim$ are open).
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
 &lt;p&gt;Locally trivial equivalence relations are ways to distinguish of points of a space where the distinction vanishes locally, i.e., each point is contained in an open neighborhood where all points are &quot;equal&quot;.&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout title=&quot;The Local-to-Global Lemma&quot; variant=&quot;theorem&quot;&amp;gt;
-A topological space $X$ is connected if and only if every locally trivial &lt;em&gt;equivalence&lt;/em&gt; relation on $X$ is (globally) trivial.
+A topological space $X$ is connected if and only if every locally trivial equivalence relation on $X$ is (globally) trivial.
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
 Suppose $X$ is connected. Let $\sim$ be a locally trivial equivalence relation on $X$. Each equivalence class of $\sim$ is non-empty and clopen. By the induction principle for connectedness, each equivalence class is equal to $X$. The equivalence relation $\sim$ has a unique equivalence class and is therefore trivial.&lt;/p&gt;
 &lt;p&gt;Conversely, let $S$ be a non-empty clopen subset of $X$. The equivalence relation $x \sim y$ if and only if $x,y \in S$ or $x,y \in X - S$ is a locally trivial equivalence relation, and is thus promoted to a globally trivial one. Let $x_0 \in S$. Every element $x \in X$ is related to $x_0$, and so $S = X$. By the induction principle for connectedness, $X$ is connected.
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
-&lt;p&gt;The local-to-global lemma frames connectedness as the principle that any distinction which vanishes locally must vanish globally.&lt;/p&gt;
+&lt;p&gt;The local-to-global lemma frames connectedness as the principle that any distinction which vanishes locally must vanish globally. It also says that the local properties which can be extended to global ones are exactly those which induce a locally trivial equivalence relation.&lt;/p&gt;
 &lt;p&gt;It is interesting to specialize the above proof of the converse direction to the case when $S$ is defined by a predicate on $X$. It is also interesting to specialize the above proof of the forwards direction when $\sim$ is the equivalence relation determined by chains.&lt;/p&gt;
 &lt;h2&gt;Applications&lt;/h2&gt;
 &lt;p&gt;Here are a few applications of my favorite notions of connectedness.
@@ -490,27 +485,37 @@ We use chain-connectedness.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;lt;/Callout&amp;gt;
 &amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;The first two propositions above can also be proven using chain-connectedness, which shows more explicitly how to patch together the local data into global data.&lt;/p&gt;
 &lt;p&gt;This next batch of applications uses a bit more machinery, so I will only give proof sketches.
 {/* TODO */}&lt;/p&gt;
-&lt;h2&gt;Closing Thoughts&lt;/h2&gt;
-&lt;p&gt;{/* TODO */}&lt;/p&gt;
-&lt;p&gt;{/*
-List of applications:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;*** need to check that locally euclidean hausdorff &amp;amp; second countable &amp;lt;=&amp;gt; paracompact + countably many components
-this is exercise 4-31 of ITM&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;On a connected smooth manifold, there is a smooth isotopy between any two points&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;These last two require a lemma about the unit ball in R^n. Need a diffeo taking p to q stabilizing the boundary of the closed unit ball.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Let M be a connected smooth manifold, and p,q in M. There is a diffeomorphism F : M -&amp;gt; M such that F(p) = q.
-(homeo/diffeomorphisms act transitively on topological/smooth manfiolds)&lt;/li&gt;
-&lt;li&gt;https://math.stackexchange.com/questions/3400734/every-connected-topological-manifold-has-a-homeomorphism-taking-p-i-to-q-i-f (this is a little bit involved)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://math.uchicago.edu/~cstaats/Charles_Staats_III/Notes_and_papers_files/connectedness2.pdf
-*/}&lt;/p&gt;
+&lt;p&gt;Here is an adaptation of Problem 4-31 from Lee&apos;s Introduction to Topological Manifolds.
+&amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
+Let $X$ be &lt;a href=&quot;https://en.wikipedia.org/wiki/Topological_manifold#Formal_definition&quot;&gt;locally Euclidean&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Hausdorff_space#Definitions&quot;&gt;Hausdorff&lt;/a&gt; of dimension $n$ and &lt;a href=&quot;https://en.wikipedia.org/wiki/Paracompact_space#Definition&quot;&gt;paracompact&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If $X$ has countably many &lt;a href=&quot;https://en.wikipedia.org/wiki/Connected_space#Connected_components&quot;&gt;connected components&lt;/a&gt;, then $X$ is a topological $n$-manifold, that is, a &lt;a href=&quot;https://en.wikipedia.org/wiki/Second-countable_space&quot;&gt;second countable&lt;/a&gt; locally Euclidean Hausdorff space.&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+It suffices to assume that $X$ is connected -- such a space is &lt;a href=&quot;https://en.wikipedia.org/wiki/Locally_connected_space#Definitions&quot;&gt;locally connected&lt;/a&gt;, so its connected components are open. A countable basis on each connected component of $X$ therefore assembles into a countable basis on the entire space.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Let $\mathcal{V}$ be the collection of all open subsets of $X$ which are $n$-manifolds and whose closure is compact; $\mathcal{V}$ is non-empty and covers $X$ since each point is contained in such a neighborhood. By paracompactness, there is a locally finite refinement $\mathcal{U}$ of $\mathcal{V}$ whose elements are all non-empty.
+
+Fix $U_0 \in \mathcal{U}$; by (chain-)connectedness, there is a finite chain in $\mathcal{U}$ from $U_0$ to $U$ for $U \in \mathcal{U}$. Let $f : \mathcal{U} \to \mathbb{N}$ be the function defined by taking each $U \in \mathcal{U}$ to the length of a shortest chain from $U_0$ to $U$ in $\mathcal{U}$. By local-finiteness, the fibers of $f$ are finite, thus $\mathcal{U}$ is countable. 
+
+Any locally Euclidean Hausdorff space of dimension $n$ which can be covered by countably many compact sets is second countable (see Problem 4-16 or [this paper](https://people.math.harvard.edu/~hirolee/pdfs/2014-fall-230a-lecture-02-addendum.pdf) for details).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;/Callout&amp;gt;
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;For each point $p$ of the open unit ball $\mathbb{B}^n$ of $\mathbb{R}^n$, there is a smooth diffeomorphism of $\mathbb{R}^n$ which is the identity outside of $\mathbb{B}^n$ and takes the origin to $p$. Such a map can be chosen to be smoothly isotopic to the identity -- a description can be found in Milnor&apos;s &lt;a href=&quot;https://webhomes.maths.ed.ac.uk/~v1ranick/papers/milnortop.pdf&quot;&gt;&lt;em&gt;Topology from a Differentiable Viewpoint&lt;/em&gt;&lt;/a&gt; on pages 23 and 24.&lt;/p&gt;
+&lt;p&gt;By solving the problem locally, we obtain the following homogeneity result:&lt;/p&gt;
+&lt;p&gt;&amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
+Let $M$ be a connected manifold (topological or differentiable of any order). The homeomorphism/diffeomorphism group of $M$ acts transitively on $M$. Moreover, such a homeomorphism/diffeomorphism can be chosen to be (smoothly) isotopic to the identity.
+&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+Say two points $x,y$ of $M$ are equivalent if there is homeomorphism/diffeomorphism taking $x$ to $y$. This determines a locally trivial equivalence relation. By the local-to-global lemma, any two points of $M$ are related by a homeomorphism/diffeomorphism.
+&amp;lt;/Callout&amp;gt;
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;A closely related result is Problem 5-4 from Lee&apos;s Introduction to Topological Manifolds:
+&amp;lt;Callout variant=&quot;proposition&quot;&amp;gt;
+Let $M$ be a connected manifold (topological or differentiably of any order) of dimension $2$ or greater. Let $(p_1,\dots,p_k)$ and $(q_1,\dots,q_k)$ be ordered $k$-tuples of points in $M$. There is a homeomorphism/diffeomorphism $F : M \to M$ such that $F(p_i) = q_i$ for each $i = 1,\dots,k$.
+&amp;lt;Callout variant=&quot;proof&quot; defaultOpen={false}&amp;gt;
+Following the sketch outlined &lt;a href=&quot;https://math.stackexchange.com/questions/3400734/every-connected-topological-manifold-has-a-homeomorphism-taking-p-i-to-q-i-f&quot;&gt;here&lt;/a&gt;, the equivalence relation described is a locally trivial one, so one can repeatedly apply the local-to-global lemma to obtain the result.
+&amp;lt;/Callout&amp;gt;
+&amp;lt;/Callout&amp;gt;&lt;/p&gt;
+&lt;p&gt;Let me know if you can think of any more applications of these characterizations of connectedness!&lt;/p&gt;
 </content:encoded><author>c squared</author></item></channel></rss>
